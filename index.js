@@ -6,10 +6,8 @@ const app = express();
 app.use(express.json());
 
 function getUsersInnerJoinEmails() {
-  // return db('users')
-  //   .innerJoin('emails', 'users.id', 'emails.userId');
-  return db('emails')
-    .innerJoin('users', 'users.id', 'emails.userId');
+  return db('users')
+    .innerJoin('emails', 'users.id', 'emails.userId');
 }
 
 function getUsersLeftJoinEmails() {
