@@ -3,7 +3,6 @@ const knex = require('knex');
 const db = knex(require('./knexfile').development);
 
 const app = express();
-
 app.use(express.json());
 
 function getUsersInnerJoinEmails() {
