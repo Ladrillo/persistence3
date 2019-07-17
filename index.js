@@ -7,7 +7,7 @@ app.use(express.json());
 
 function getUsersInnerJoinEmails() {
   return db('users')
-    .innerJoin('emails', 'users.id', 'emails.userId');
+    .innerJoin('emails', 'users.id', 'emails.user_id');
 }
 
 function getUsersLeftJoinEmails() {
@@ -67,7 +67,7 @@ function addUserWithEmail({ fname, lname, email }) {
       .insert({ fname, lname })
       .then(([id]) => {
         return trx('emails')
-          .insert({ email, userId: id });
+          .insert({ email, user_id: id });
       });
   });
 }
