@@ -6,8 +6,8 @@ exports.seed = function (knex) {
         { email: 'orange@orange.com', user_id: 2 },
         { email: 'pear@pear.com', user_id: 3 },
         { email: 'carrot@carrot.com', user_id: 3 },
-        { email: 'tomato@tomato.com' },
-        { email: 'garlic@garlic.com' },
+        { email: 'tomato@tomato.com', user_id: 4 },
+        { email: 'garlic@garlic.com', user_id: 5 },
       ]);
     });
 };
