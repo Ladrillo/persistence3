@@ -6,7 +6,9 @@ const app = express();
 app.use(express.json());
 
 function getUsersInnerJoinEmails() {
+  // select * from users
   return db('users')
+    // join emails on users.id = emails.user_id
     .innerJoin('emails', 'users.id', 'emails.user_id');
 }
 
